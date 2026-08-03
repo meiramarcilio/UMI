@@ -1,10 +1,11 @@
 # Computerized Mobile Unity / Unidade Móvel Informatizada
 
-This project shows an old mobile app developed in 2008, under Microsoft Visual Studio 2005, using a .NET Compact Framework.
+UMI is a mobile app (Smart Device Application) whose goal is to enable agents to access enterprise data in the field through a web service, as an intranet extension.
 
-The app objective is to serve agents to access enterprise data in field, through webservice, as an intranet extension.
+This project includes an older mobile app developed in 2008 using Microsoft Visual Studio 2005 and the .NET Compact Framework.
 
-This app earned a Microsoft award in 2008.
+In 2008, this app received the Microsoft award “Sua Vez de Acontecer.”
 
-Developers: Marcilio Meira
-Supervisor: Geraldo Marcelo Cabral
+Product Owner: Marcilio Meira (marcilio_meira@hotmail.com)
+
+Scrum Master: Geraldo Marcelo Cabral de Souza (gmarcelo@set.rn.gov.br)

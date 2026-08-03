@@ -1,0 +1,45 @@
+﻿namespace OpenNETCF.Tapi
+{
+    using System;
+
+    public enum CELLDEVCONFIG_SPEED
+    {
+        SPEED_UNKNOWN,
+        SPEED_AUTO,
+        SPEED_300_V21,
+        SPEED_300_V110,
+        SPEED_1200_V22,
+        SPEED_1200_75_V23,
+        SPEED_1200_V110,
+        SPEED_1200_V120,
+        SPEED_2400_V22BIS,
+        SPEED_2400_V26TER,
+        SPEED_2400_V110,
+        SPEED_2400_V120,
+        SPEED_4800_V32,
+        SPEED_4800_V110,
+        SPEED_4800_V120,
+        SPEED_9600_V32,
+        SPEED_9600_V34,
+        SPEED_9600_V110,
+        SPEED_9600_V120,
+        SPEED_14400_V34,
+        SPEED_14400_V110,
+        SPEED_14400_V120,
+        SPEED_19200_V34,
+        SPEED_19200_V110,
+        SPEED_19200_V120,
+        SPEED_28800_V34,
+        SPEED_28800_V110,
+        SPEED_28800_V120,
+        SPEED_38400_V110,
+        SPEED_38400_V120,
+        SPEED_48000_V110,
+        SPEED_48000_V120,
+        SPEED_56000_V110,
+        SPEED_56000_V120,
+        SPEED_56000_TRANSP,
+        SPEED_64000_TRANSP
+    }
+}
+

@@ -1,0 +1,36 @@
+﻿namespace OpenNETCF.Tapi
+{
+    using System;
+
+    public enum LINEMESSAGES
+    {
+        LINE_ADDRESSSTATE,
+        LINE_CALLINFO,
+        LINE_CALLSTATE,
+        LINE_CLOSE,
+        LINE_DEVSPECIFIC,
+        LINE_DEVSPECIFICFEATURE,
+        LINE_GATHERDIGITS,
+        LINE_GENERATE,
+        LINE_LINEDEVSTATE,
+        LINE_MONITORDIGITS,
+        LINE_MONITORMEDIA,
+        LINE_MONITORTONE,
+        LINE_REPLY,
+        LINE_REQUEST,
+        PHONE_BUTTON,
+        PHONE_CLOSE,
+        PHONE_DEVSPECIFIC,
+        PHONE_REPLY,
+        PHONE_STATE,
+        LINE_CREATE,
+        PHONE_CREATE,
+        LINE_AGENTSPECIFIC,
+        LINE_AGENTSTATUS,
+        LINE_APPNEWCALL,
+        LINE_PROXYREQUEST,
+        LINE_REMOVE,
+        PHONE_REMOVE
+    }
+}
+

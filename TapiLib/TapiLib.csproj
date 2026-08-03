@@ -1,0 +1,333 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FD48B0C-DFC7-47AB-9EB2-A8B01D9E7F6B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>TapiLib</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\ArrayAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\ByteCopy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\Call.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CALLER_ID_OPTIONS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLBEARERINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLDATACOMPINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLDEVCONFIG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLDEVCONFIG_SPEED.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLGPRSCONNECTIONINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLGPRSQOSSETTINGS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CELLRADIOLINKINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\CellTSP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\GPRSDELAYCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\GPRSPRECEDENCECLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\GPRSRELIABILITYCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\InternalAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\Line.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEADDRCAPFLAGS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEADDRESSCAPS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEADDRESSMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEADDRESSSTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEADDRESSSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEANSWERMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEBARRMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEBEARERMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLFEATURE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLFEATURE2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLINFOSTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLLIST.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLORIGIN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLPARAMFLAGS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLPARAMS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLPARAMSDEVSPECIFIC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLPRIVILEGE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLREASON.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLSELECT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLSTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECALLWAITING.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINECAPSCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVCAPFLAGS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVCAPS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVSPECIFIC_CELLTSP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVSTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDEVSTATUSFLAGS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDIALPARAMS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDIALTONEMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDIGITMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEDISCONNECTMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEEQUIPSTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEERR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEEXTENSIONID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEFEATURE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEFORWARDMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEGENERALINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEGPRSCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEGPRSCLASSCHANGED.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEHSCSDAIRRATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEHSCSDCODING.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEINITIALIZEEXOPTIONS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEINITIALIZEEXPARAMS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEMEDIACONTROL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEMEDIAMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEMESSAGE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEMESSAGES.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEMUTESTATE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEOPERATOR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEOPERATOROPTIONS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEOPERATORSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEOPFORMAT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEOPSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINERADIOPRESENCE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINERADIOSUPPORT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEREGMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEREGSTATUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEROAMMODE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINESENDCALLERID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINESYSTEMTYPE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\LINEUSSDFLAG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\MakeCallAsyncResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\MEANTHRUCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\NativeTapi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\PEAKTHRUCLASS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\Tapi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\TapiAsyncResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\TapiException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\TapiStruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenNETCF\Tapi\VARSTRING.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

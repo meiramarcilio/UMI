@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "umi.setup", "umi.setup\umi.setup.vddproj", "{CC0D5D90-993B-4423-9D74-545641F0C241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umi.device", "umi.device\umi.device.csproj", "{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = umi.device\\umi.device.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = umi.device\\
+		SccProjectUniqueName2 = umi.setup\\umi.setup.vddproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = umi.setup\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC0D5D90-993B-4423-9D74-545641F0C241}.Debug|Any CPU.ActiveCfg = Debug
+		{CC0D5D90-993B-4423-9D74-545641F0C241}.Debug|Any CPU.Build.0 = Debug
+		{CC0D5D90-993B-4423-9D74-545641F0C241}.Release|Any CPU.ActiveCfg = Release
+		{CC0D5D90-993B-4423-9D74-545641F0C241}.Release|Any CPU.Build.0 = Release
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

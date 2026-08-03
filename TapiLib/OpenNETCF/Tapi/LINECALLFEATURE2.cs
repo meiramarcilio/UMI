@@ -1,0 +1,14 @@
+﻿namespace OpenNETCF.Tapi
+{
+    using System;
+
+    [Flags]
+    public enum LINECALLFEATURE2
+    {
+        LINECALLFEATURE2_NOHOLDCONFERENCE = 1,
+        LINECALLFEATURE2_ONESTEPTRANSFER = 2,
+        LINECALLFEATURE2_TRANSFERCONF = 0x80,
+        LINECALLFEATURE2_TRANSFERNORM = 0x40
+    }
+}
+

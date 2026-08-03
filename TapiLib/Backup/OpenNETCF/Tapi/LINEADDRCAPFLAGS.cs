@@ -1,0 +1,40 @@
+﻿namespace OpenNETCF.Tapi
+{
+    using System;
+
+    [Flags]
+    public enum LINEADDRCAPFLAGS
+    {
+        ACCEPTTOALERT = 0x100000,
+        AUTORECONNECT = 0x400,
+        BLOCKIDDEFAULT = 8,
+        BLOCKIDOVERRIDE = 0x10,
+        COMPLETIONID = 0x800,
+        CONFDROP = 0x200000,
+        CONFERENCEHELD = 0x4000,
+        CONFERENCEMAKE = 0x8000,
+        DESTOFFHOOK = 0x80,
+        DIALED = 0x20,
+        FWDBUSYNAADDR = 0x80000,
+        FWDCONSULT = 0x100,
+        FWDINTEXTADDR = 0x40000,
+        FWDNUMRINGS = 1,
+        FWDSTATUSVALID = 0x20000,
+        HOLDMAKESNEW = 0x4000000,
+        NOEXTERNALCALLS = 0x10000000,
+        NOINTERNALCALLS = 0x8000000,
+        ORIGOFFHOOK = 0x40,
+        PARTIALDIAL = 0x10000,
+        PICKUPCALLWAIT = 0x400000,
+        PICKUPGROUPID = 2,
+        PREDICTIVEDIALER = 0x800000,
+        QUEUE = 0x1000000,
+        ROUTEPOINT = 0x2000000,
+        SECURE = 4,
+        SETCALLINGID = 0x20000000,
+        SETUPCONFNULL = 0x200,
+        TRANSFERHELD = 0x1000,
+        TRANSFERMAKE = 0x2000
+    }
+}
+

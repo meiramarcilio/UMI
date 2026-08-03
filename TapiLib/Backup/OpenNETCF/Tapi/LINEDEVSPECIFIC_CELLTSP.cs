@@ -1,0 +1,17 @@
+﻿namespace OpenNETCF.Tapi
+{
+    using System;
+
+    public enum LINEDEVSPECIFIC_CELLTSP
+    {
+        LINE_CURRENTLINECHANGE = 0x106,
+        LINE_CURRENTSYSTEMCHANGE = 0x107,
+        LINE_EQUIPSTATECHANGE = 0x100,
+        LINE_GPRSCLASS = 0x101,
+        LINE_GPRSREGISTERSTATE = 0x102,
+        LINE_RADIOPRESENCE = 0x103,
+        LINE_REGISTERSTATE = 260,
+        LINE_USSD = 0x105
+    }
+}
+

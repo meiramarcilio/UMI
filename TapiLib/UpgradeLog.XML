@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TapiLib">
+</Property><Property Name="Solution File" Value="C:\Projetos\DotNet\UMI\TapiLib\TapiLib.sln">
+</Property><Property Name="Date" Value="sexta-feira, 1 de agosto de 2008">
+</Property><Property Name="Time" Value="11:41:01">
+</Property></Properties><Event ErrorLevel="0" Project="TapiLib" Source="TapiLib.csproj" Description="Project file successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\TapiLib.csproj">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="Global.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\Global.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\ArrayAttribute.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\ArrayAttribute.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\ByteCopy.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\ByteCopy.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\Call.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\Call.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CALLER_ID_OPTIONS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CALLER_ID_OPTIONS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLBEARERINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLBEARERINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLDATACOMPINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLDATACOMPINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLDEVCONFIG.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLDEVCONFIG.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLDEVCONFIG_SPEED.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLDEVCONFIG_SPEED.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLGPRSCONNECTIONINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLGPRSCONNECTIONINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLGPRSQOSSETTINGS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLGPRSQOSSETTINGS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CELLRADIOLINKINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CELLRADIOLINKINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\CellTSP.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\CellTSP.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\GPRSDELAYCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\GPRSDELAYCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\GPRSPRECEDENCECLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\GPRSPRECEDENCECLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\GPRSRELIABILITYCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\GPRSRELIABILITYCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\InternalAttribute.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\InternalAttribute.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\Line.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\Line.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEADDRCAPFLAGS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEADDRCAPFLAGS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEADDRESSCAPS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEADDRESSCAPS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEADDRESSMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEADDRESSMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEADDRESSSTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEADDRESSSTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEADDRESSSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEADDRESSSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEANSWERMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEANSWERMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEBARRMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEBARRMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEBEARERMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEBEARERMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLFEATURE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLFEATURE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLFEATURE2.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLFEATURE2.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLINFOSTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLINFOSTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLLIST.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLLIST.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLORIGIN.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLORIGIN.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLPARAMFLAGS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLPARAMFLAGS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLPARAMS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLPARAMS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLPARAMSDEVSPECIFIC.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLPARAMSDEVSPECIFIC.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLPRIVILEGE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLPRIVILEGE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLREASON.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLREASON.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLSELECT.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLSELECT.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLSTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLSTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECALLWAITING.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECALLWAITING.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINECAPSCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINECAPSCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVCAPFLAGS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVCAPFLAGS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVCAPS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVCAPS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVSPECIFIC_CELLTSP.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVSPECIFIC_CELLTSP.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVSTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVSTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDEVSTATUSFLAGS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDEVSTATUSFLAGS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDIALPARAMS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDIALPARAMS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDIALTONEMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDIALTONEMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDIGITMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDIGITMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEDISCONNECTMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEDISCONNECTMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEEQUIPSTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEEQUIPSTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEERR.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEERR.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEEXTENSIONID.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEEXTENSIONID.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEFEATURE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEFEATURE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEFORWARDMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEFORWARDMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEGENERALINFO.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEGENERALINFO.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEGPRSCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEGPRSCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEGPRSCLASSCHANGED.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEGPRSCLASSCHANGED.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEHSCSDAIRRATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEHSCSDAIRRATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEHSCSDCODING.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEHSCSDCODING.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEINITIALIZEEXOPTIONS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEINITIALIZEEXOPTIONS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEINITIALIZEEXPARAMS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEINITIALIZEEXPARAMS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEMEDIACONTROL.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEMEDIACONTROL.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEMEDIAMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEMEDIAMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEMESSAGE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEMESSAGE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEMESSAGES.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEMESSAGES.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEMUTESTATE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEMUTESTATE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEOPERATOR.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEOPERATOR.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEOPERATOROPTIONS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEOPERATOROPTIONS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEOPERATORSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEOPERATORSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEOPFORMAT.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEOPFORMAT.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEOPSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEOPSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINERADIOPRESENCE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINERADIOPRESENCE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINERADIOSUPPORT.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINERADIOSUPPORT.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEREGMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEREGMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEREGSTATUS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEREGSTATUS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEROAMMODE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEROAMMODE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINESENDCALLERID.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINESENDCALLERID.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINESYSTEMTYPE.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINESYSTEMTYPE.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\LINEUSSDFLAG.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\LINEUSSDFLAG.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\MakeCallAsyncResult.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\MakeCallAsyncResult.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\MEANTHRUCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\MEANTHRUCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\NativeTapi.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\NativeTapi.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\PEAKTHRUCLASS.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\PEAKTHRUCLASS.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\Tapi.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\Tapi.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\TapiAsyncResult.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\TapiAsyncResult.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\TapiException.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\TapiException.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\TapiStruct.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\TapiStruct.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="OpenNETCF\Tapi\VARSTRING.cs" Description="File successfully backed up as C:\Projetos\DotNet\UMI\TapiLib\Backup\OpenNETCF\Tapi\VARSTRING.cs">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="TapiLib.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TapiLib" Source="TapiLib.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TapiLib" Source="TapiLib.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

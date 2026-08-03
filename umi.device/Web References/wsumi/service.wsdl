@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/wsumi" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://localhost/wsumi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviços consumidos pela Unidade Móvel Informatizada (UMI_Company).</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/wsumi">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="lerTicketERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCd_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSenha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerTicketERPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerTicketERPResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validarTicketResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCd_usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerUsuarioResult" type="tns:ArrayOfUsuarioERP" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsuarioERP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UsuarioERP" nillable="true" type="tns:UsuarioERP" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UsuarioERP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_VALIDADE_SENHA" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO_INCLUSAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_INCLUSAO" />
+          <s:element minOccurs="0" maxOccurs="1" name="FG_STATUS_LOGIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TX_EMAIL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_ORGAO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_RESPONSABILIDADE_ORGAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_LIMITE_SENHA_INF" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO_ALTERACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_ALTERACAO" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_BLOQUEIO_USUARIO" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_FORMAL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarContribuintesAtualizados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtUltimaAtualizacao" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Contribuinte">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_CONTRIBUINTE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_CNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_FORMAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_CONHECIDO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CD_TIPO_CONTRIBUINTE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_CNAE_FISCAL_PRIM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_CNAE_FISCAL_PRIM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_CNAE_FISCAL_SECU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_CNAE_FISCAL_SECU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_INICIO_ATIVIDADE" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_CONTRIBUINTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_CONTADOR" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_NIRE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CD_FAIXA_ENQUADRAMENTO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_NATUREZA_JURIDICA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_TIPO_CONTRIBUINTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_FORMA_PAGAMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_ULTIMA_ATUALIZACAO" />
+          <s:element minOccurs="1" maxOccurs="1" name="CREDENCIADO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ST_FISCAL" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAOFISCAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="tns:ArrayOfEndereco" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERVACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEndereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Endereco" nillable="true" type="tns:Endereco" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Endereco">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SG_ORGAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_TIPO_LOGRADOURO_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_LOGRADOURO_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_LOGRADOURO_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_COMPLEMENTO_CS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_ANDAR" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_DDD_TELEFONE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_TELEFONE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_FAX" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_DDD_FAX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_CEP_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_BAIRRO_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_MUNICIPIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_UF_CS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_ENDERECO_INTERNET" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContribuinte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Contribuinte" nillable="true" type="tns:Contribuinte" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarContribuintesAtualizadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarContribuintesAtualizadosResult" type="tns:ArrayOfContribuinte" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerContribuinteResult" type="tns:ArrayOfContribuinte" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinteCNPJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCNPJ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinteCNPJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerContribuinteCNPJResult" type="tns:ArrayOfContribuinte" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinteCNPJBase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCNPJBase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerContribuinteCNPJBaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerContribuinteCNPJBaseResult" type="tns:ArrayOfContribuinte" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarContribuinteCPFSocio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarContribuinteCPFSocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarContribuinteCPFSocioResult" type="tns:ArrayOfContribuinte" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarSocios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Socio">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_CNPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NM_FORMAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_QUALIFICACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FG_RESPONSAVEL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FG_RESPONSAVELDESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_JURIDICA" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSocio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Socio" nillable="true" type="tns:Socio" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarSociosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarSociosResult" type="tns:ArrayOfSocio" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarOcorrenciasFiscais">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Ocorrencia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="INSCRICAO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATABAIXA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAINCLUSAO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTINCLUSAO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOcorrencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ocorrencia" nillable="true" type="tns:Ocorrencia" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarOcorrenciasFiscaisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarOcorrenciasFiscaisResult" type="tns:ArrayOfOcorrencia" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarRecolhimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Recolhimento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NU_NOSSO_NUMERO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_DOCUMENTO_ARRECADACAO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_VENCIMENTO_DEBITO" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_PAGAMENTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="VL_NOMINAL_PAGO_ATUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_BANCO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_AGENCIA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_BANCO_COBRADOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_AGENCIA_COBRADORA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_DV_AGENCIA_COBRADORA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_OUTRA_MOEDA_ATUAL" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="VL_DOCUMENTO_ATUAL" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_VENCIMENTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_RETORNO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_TRIBUTO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_CODIGO_RECEITA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SG_CODIGO_RECEITA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRecolhimento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Recolhimento" nillable="true" type="tns:Recolhimento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarRecolhimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarRecolhimentoResult" type="tns:ArrayOfRecolhimento" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarNotasFiscaisSaida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotaFiscalSaida">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_AARET" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_MAQ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_LOTE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_SEQUEN" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_DVSELO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_NOTAF" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_URFP" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_INSCRI" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_DTEMISSAO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_POSTO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_VALTOTAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_VALICMS" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_VALSUBST" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_CTRC" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_TRANSP" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_STATUS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_DTDIGIT" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_HORA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_SERIE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_VLR_FRETE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_ICMS_FRETE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_PESO" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_DOCPAGTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_CGCDEST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_UFDEST" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_CODPROD" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_DOCPGFRETE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_AFTE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_AFTE_COBR" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_AFTE_FRETE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_VLR_PAGO" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_OPER_INC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_DATA_INC" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOTS_OPER_ALT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_DATA_ALT" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOTS_PROC_ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNotaFiscalSaida">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotaFiscalSaida" nillable="true" type="tns:NotaFiscalSaida" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarNotasFiscaisSaidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarNotasFiscaisSaidaResult" type="tns:ArrayOfNotaFiscalSaida" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarNotasFiscaisEntrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotaFiscalEntrada">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_LOTE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_SEQUEN" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_AARET" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOT_MAQ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_NOTAF" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_URFP" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_INSCRI" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_DTEMISSAO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_MMRET" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_DDRET" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_POSTO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_HORA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_VALTOTAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_VALICMS" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_ICMSUBST" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_DTDIGIT" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_STATUS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_SITUACAO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOT_SERIE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOT_OPERADOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOT_CGC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSNOT_UFEMIT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_CODCOB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_QUANT" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="DSNOT_PROC_ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNotaFiscalEntrada">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotaFiscalEntrada" nillable="true" type="tns:NotaFiscalEntrada" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarNotasFiscaisEntradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarNotasFiscaisEntradaResult" type="tns:ArrayOfNotaFiscalEntrada" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarNotasFiscaisEletronicas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCNPJEmitente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotaFiscalEletronica">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDNFE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUF" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEMI" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SERIE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NNF" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CNF" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CDV" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VERSAOSCHEMA" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALORNFE" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="RAZAOSOCIALEMITENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IEEMITENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UFEMITENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJDESTINATARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RAZAOSOCIALDESTINATARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IEDESTINATARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UFDESTINATARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NATUREZAOPERACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPONFE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIGESTVALUE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOEMISSAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENVIADA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNotaFiscalEletronica">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotaFiscalEletronica" nillable="true" type="tns:NotaFiscalEletronica" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarNotasFiscaisEletronicasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarNotasFiscaisEletronicasResult" type="tns:ArrayOfNotaFiscalEletronica" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerNotaFiscalEletronica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCNPJEmitente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lngNumeroNota" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCincoUltimosDigitosChave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerNotaFiscalEletronicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerNotaFiscalEletronicaResult" type="tns:ArrayOfNotaFiscalEletronica" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerNotaFiscalRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lngNumeroNota" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotaFiscalRegistro">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_NOTA_FISCAL" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CD_DOCUMENTO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_SERIE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_NOTA_FISCAL" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_RECEBIMENTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="VL_NOTA_FISCAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_ORIGEM" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="REMETENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_DESTINO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_CONTRIBUINTE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_IE_OUTRO_ESTADO_ORIGEM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_IE_OUTRO_ESTADO_DESTINO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_DIGITADOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_AUDITOR_CONFIRMACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_NOTA_FISCAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNotaFiscalRegistro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotaFiscalRegistro" nillable="true" type="tns:NotaFiscalRegistro" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="lerNotaFiscalRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerNotaFiscalRegistroResult" type="tns:ArrayOfNotaFiscalRegistro" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerECFLacre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lngNumeroLacre" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ECFLacre">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TP_LACRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_LACRE_DESCRICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_LACRE" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PEDIDO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_LACRE_DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO_INCLUSAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_TRANSFERENCIA_LACRE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_INCLUSAO" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_BAIXA" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_OBSERVACAO_BAIXA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO_BAIXA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_BAIXA" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_USUARIO_CANCELAMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_CANCELAMENTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_CAIXA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_MARCA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_MODELO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA_EQUIPAMENTO_CONTRIB" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_CONTRIBUINTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_VERSAO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_CONTRIBUINTE" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TP_LACRE_INTERVENCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_EQUIPAMENTO_CONTRIBUINTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_EQUIPAMENTO_DESCRICAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfECFLacre">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ECFLacre" nillable="true" type="tns:ECFLacre" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="lerECFLacreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerECFLacreResult" type="tns:ArrayOfECFLacre" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerECFEquipamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNumeroSerie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ECFEquipamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NM_FORMAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INSCRICAO_ESTADUAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_OBSERVACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_MARCA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_MARCA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_MODELO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_EQUIPAMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DS_MODELO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_PESSOA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_CONTRIBUINTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SQ_EQUIPAMENTO_CONTRIBUINTE" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SG_VERSAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NU_SERIE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_CAIXA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_INICIO" />
+          <s:element minOccurs="0" maxOccurs="1" name="TM_INCLUSAO" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_EQUIPAMENTO_CONTRIBUINTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ST_EQUIPAMENTO_CONTRIB_DESC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NU_VERSAO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT_FIM" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_CNAE_FISCAL_PRIM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CD_CNAE_FISCAL_SECU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LACRES_INTERNOS" type="tns:ArrayOfECFLacre" />
+          <s:element minOccurs="0" maxOccurs="1" name="LACRES_EXTERNOS" type="tns:ArrayOfECFLacre" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfECFEquipamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ECFEquipamento" nillable="true" type="tns:ECFEquipamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="lerECFEquipamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerECFEquipamentoResult" type="tns:ArrayOfECFEquipamento" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarECFEquipamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInscricaoEstadual" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarECFEquipamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarECFEquipamentoResult" type="tns:ArrayOfECFEquipamento" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarPassesAbertos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlaca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Passe">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="Num_Passe" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPFMotorista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeMotorista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Placa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UFPlaca" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoPosto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Situacao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomePosto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Emissor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Origem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destino" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermanenciaMinutos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermanenciaDias" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPasse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Passe" nillable="true" type="tns:Passe" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarPassesAbertosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarPassesAbertosResult" type="tns:ArrayOfPasse" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerPasseAberto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intNumero_Passe" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerPasseAbertoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerPasseAbertoResult" type="tns:ArrayOfPasse" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarGPS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gps" type="tns:Gps" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Gps">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdGps" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdDispositivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="tns:GpsPosicao" />
+          <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="tns:GpsPosicao" />
+          <s:element minOccurs="1" maxOccurs="1" name="Velocidade" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VelocidadeLimiteAlcancada" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Satelites" type="tns:ArrayOfGpsSatelite" />
+          <s:element minOccurs="1" maxOccurs="1" name="Orientacao" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fix" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataHora" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiluicaoHorizontal" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AltitudeNivelMar" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AlturaWGS84" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GpsPosicao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PosicaoMapa" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Graus" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Minutos" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hemisferio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HemisferioDescricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGpsSatelite">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GpsSatelite" nillable="true" type="tns:GpsSatelite" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GpsSatelite">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdGps" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSatelite" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PseudoCodigoRandomico" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Azimute" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Elevacao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NivelSinal" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="registrarGPSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrarGPSResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarGPS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdDispositivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraInicio" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraFim" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGps">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Gps" nillable="true" type="tns:Gps" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="listarGPSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarGPSResult" type="tns:ArrayOfGps" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerGPS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdDispositivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lerGPSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lerGPSResult" type="tns:ArrayOfGps" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExceptionMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="lerTicketERPSoapIn">
+    <wsdl:part name="parameters" element="tns:lerTicketERP" />
+  </wsdl:message>
+  <wsdl:message name="lerTicketERPSoapOut">
+    <wsdl:part name="parameters" element="tns:lerTicketERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:validarTicket" />
+  </wsdl:message>
+  <wsdl:message name="validarTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:validarTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:lerUsuario" />
+  </wsdl:message>
+  <wsdl:message name="lerUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:lerUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarContribuintesAtualizadosSoapIn">
+    <wsdl:part name="parameters" element="tns:listarContribuintesAtualizados" />
+  </wsdl:message>
+  <wsdl:message name="listarContribuintesAtualizadosSoapOut">
+    <wsdl:part name="parameters" element="tns:listarContribuintesAtualizadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteSoapIn">
+    <wsdl:part name="parameters" element="tns:lerContribuinte" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteSoapOut">
+    <wsdl:part name="parameters" element="tns:lerContribuinteResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteCNPJSoapIn">
+    <wsdl:part name="parameters" element="tns:lerContribuinteCNPJ" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteCNPJSoapOut">
+    <wsdl:part name="parameters" element="tns:lerContribuinteCNPJResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteCNPJBaseSoapIn">
+    <wsdl:part name="parameters" element="tns:lerContribuinteCNPJBase" />
+  </wsdl:message>
+  <wsdl:message name="lerContribuinteCNPJBaseSoapOut">
+    <wsdl:part name="parameters" element="tns:lerContribuinteCNPJBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarContribuinteCPFSocioSoapIn">
+    <wsdl:part name="parameters" element="tns:listarContribuinteCPFSocio" />
+  </wsdl:message>
+  <wsdl:message name="listarContribuinteCPFSocioSoapOut">
+    <wsdl:part name="parameters" element="tns:listarContribuinteCPFSocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarSociosSoapIn">
+    <wsdl:part name="parameters" element="tns:listarSocios" />
+  </wsdl:message>
+  <wsdl:message name="listarSociosSoapOut">
+    <wsdl:part name="parameters" element="tns:listarSociosResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarOcorrenciasFiscaisSoapIn">
+    <wsdl:part name="parameters" element="tns:listarOcorrenciasFiscais" />
+  </wsdl:message>
+  <wsdl:message name="listarOcorrenciasFiscaisSoapOut">
+    <wsdl:part name="parameters" element="tns:listarOcorrenciasFiscaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarRecolhimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:listarRecolhimento" />
+  </wsdl:message>
+  <wsdl:message name="listarRecolhimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:listarRecolhimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisSaidaSoapIn">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisSaida" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisSaidaSoapOut">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisSaidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisEntradaSoapIn">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisEntrada" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisEntradaSoapOut">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisEletronicasSoapIn">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisEletronicas" />
+  </wsdl:message>
+  <wsdl:message name="listarNotasFiscaisEletronicasSoapOut">
+    <wsdl:part name="parameters" element="tns:listarNotasFiscaisEletronicasResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerNotaFiscalEletronicaSoapIn">
+    <wsdl:part name="parameters" element="tns:lerNotaFiscalEletronica" />
+  </wsdl:message>
+  <wsdl:message name="lerNotaFiscalEletronicaSoapOut">
+    <wsdl:part name="parameters" element="tns:lerNotaFiscalEletronicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerNotaFiscalRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:lerNotaFiscalRegistro" />
+  </wsdl:message>
+  <wsdl:message name="lerNotaFiscalRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:lerNotaFiscalRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerECFLacreSoapIn">
+    <wsdl:part name="parameters" element="tns:lerECFLacre" />
+  </wsdl:message>
+  <wsdl:message name="lerECFLacreSoapOut">
+    <wsdl:part name="parameters" element="tns:lerECFLacreResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerECFEquipamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:lerECFEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="lerECFEquipamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:lerECFEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarECFEquipamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:listarECFEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="listarECFEquipamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:listarECFEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarPassesAbertosSoapIn">
+    <wsdl:part name="parameters" element="tns:listarPassesAbertos" />
+  </wsdl:message>
+  <wsdl:message name="listarPassesAbertosSoapOut">
+    <wsdl:part name="parameters" element="tns:listarPassesAbertosResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerPasseAbertoSoapIn">
+    <wsdl:part name="parameters" element="tns:lerPasseAberto" />
+  </wsdl:message>
+  <wsdl:message name="lerPasseAbertoSoapOut">
+    <wsdl:part name="parameters" element="tns:lerPasseAbertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarGPSSoapIn">
+    <wsdl:part name="parameters" element="tns:registrarGPS" />
+  </wsdl:message>
+  <wsdl:message name="registrarGPSSoapOut">
+    <wsdl:part name="parameters" element="tns:registrarGPSResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarGPSSoapIn">
+    <wsdl:part name="parameters" element="tns:listarGPS" />
+  </wsdl:message>
+  <wsdl:message name="listarGPSSoapOut">
+    <wsdl:part name="parameters" element="tns:listarGPSResponse" />
+  </wsdl:message>
+  <wsdl:message name="lerGPSSoapIn">
+    <wsdl:part name="parameters" element="tns:lerGPS" />
+  </wsdl:message>
+  <wsdl:message name="lerGPSSoapOut">
+    <wsdl:part name="parameters" element="tns:lerGPSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="serviceSoap">
+    <wsdl:operation name="lerTicketERP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Autentica as credenciais de um usuário do ERP e retorna um Ticket de autenticação.</wsdl:documentation>
+      <wsdl:input message="tns:lerTicketERPSoapIn" />
+      <wsdl:output message="tns:lerTicketERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarTicket">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida o ticket de autenticação do ERP.</wsdl:documentation>
+      <wsdl:input message="tns:validarTicketSoapIn" />
+      <wsdl:output message="tns:validarTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê o usuário na tabela de usuários do ERP.</wsdl:documentation>
+      <wsdl:input message="tns:lerUsuarioSoapIn" />
+      <wsdl:output message="tns:lerUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuintesAtualizados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Contribuintes que tiveram seus cadastros atualizados a partir da data informada.</wsdl:documentation>
+      <wsdl:input message="tns:listarContribuintesAtualizadosSoapIn" />
+      <wsdl:output message="tns:listarContribuintesAtualizadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinte">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê informações de um Contribuinte (pela Inscrição Estadual).</wsdl:documentation>
+      <wsdl:input message="tns:lerContribuinteSoapIn" />
+      <wsdl:output message="tns:lerContribuinteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê informações de um Contribuinte (pelo CNPJ).</wsdl:documentation>
+      <wsdl:input message="tns:lerContribuinteCNPJSoapIn" />
+      <wsdl:output message="tns:lerContribuinteCNPJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJBase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê informações de um Contribuinte (pelo CNPJ Base).</wsdl:documentation>
+      <wsdl:input message="tns:lerContribuinteCNPJBaseSoapIn" />
+      <wsdl:output message="tns:lerContribuinteCNPJBaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuinteCPFSocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Contribuintes (pelo CPF do Sócio).</wsdl:documentation>
+      <wsdl:input message="tns:listarContribuinteCPFSocioSoapIn" />
+      <wsdl:output message="tns:listarContribuinteCPFSocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarSocios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os Sócios de um Contribuinte.</wsdl:documentation>
+      <wsdl:input message="tns:listarSociosSoapIn" />
+      <wsdl:output message="tns:listarSociosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarOcorrenciasFiscais">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Ocorrências Fiscais do Contribuinte.</wsdl:documentation>
+      <wsdl:input message="tns:listarOcorrenciasFiscaisSoapIn" />
+      <wsdl:output message="tns:listarOcorrenciasFiscaisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarRecolhimento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista o Recolhimento de um Contribuinte.</wsdl:documentation>
+      <wsdl:input message="tns:listarRecolhimentoSoapIn" />
+      <wsdl:output message="tns:listarRecolhimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisSaida">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Notas Fiscais de Saída do Contribuinte.</wsdl:documentation>
+      <wsdl:input message="tns:listarNotasFiscaisSaidaSoapIn" />
+      <wsdl:output message="tns:listarNotasFiscaisSaidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEntrada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Notas Fiscais de Entrada do Contribuinte.</wsdl:documentation>
+      <wsdl:input message="tns:listarNotasFiscaisEntradaSoapIn" />
+      <wsdl:output message="tns:listarNotasFiscaisEntradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEletronicas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Notas Fiscais Eletrônicas de um Emitente.</wsdl:documentation>
+      <wsdl:input message="tns:listarNotasFiscaisEletronicasSoapIn" />
+      <wsdl:output message="tns:listarNotasFiscaisEletronicasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalEletronica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê uma Nota Fiscal Eletrônica de um Emitente.</wsdl:documentation>
+      <wsdl:input message="tns:lerNotaFiscalEletronicaSoapIn" />
+      <wsdl:output message="tns:lerNotaFiscalEletronicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalRegistro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê um Registro de Nota Fiscal.</wsdl:documentation>
+      <wsdl:input message="tns:lerNotaFiscalRegistroSoapIn" />
+      <wsdl:output message="tns:lerNotaFiscalRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerECFLacre">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê informações de um Lacre ECF.</wsdl:documentation>
+      <wsdl:input message="tns:lerECFLacreSoapIn" />
+      <wsdl:output message="tns:lerECFLacreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerECFEquipamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê informações de um Equipamento ECF de Contribuinte (pelo Número de Série).</wsdl:documentation>
+      <wsdl:input message="tns:lerECFEquipamentoSoapIn" />
+      <wsdl:output message="tns:lerECFEquipamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarECFEquipamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Equipamentos ECF de um Contribuinte (pela Inscrição Estadual).</wsdl:documentation>
+      <wsdl:input message="tns:listarECFEquipamentoSoapIn" />
+      <wsdl:output message="tns:listarECFEquipamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarPassesAbertos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os Passes (Estaduais e Interestaduais) Abertos para uma Placa de veículo.</wsdl:documentation>
+      <wsdl:input message="tns:listarPassesAbertosSoapIn" />
+      <wsdl:output message="tns:listarPassesAbertosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerPasseAberto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê um Passe (Estaduais e Interestaduais) Aberto pelo seu Número.</wsdl:documentation>
+      <wsdl:input message="tns:lerPasseAbertoSoapIn" />
+      <wsdl:output message="tns:lerPasseAbertoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarGPS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra informações do GPS</wsdl:documentation>
+      <wsdl:input message="tns:registrarGPSSoapIn" />
+      <wsdl:output message="tns:registrarGPSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarGPS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista todos os dados de um Dispositivo GPS.</wsdl:documentation>
+      <wsdl:input message="tns:listarGPSSoapIn" />
+      <wsdl:output message="tns:listarGPSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lerGPS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lê o último registro de GPS para um dispositivo específico.</wsdl:documentation>
+      <wsdl:input message="tns:lerGPSSoapIn" />
+      <wsdl:output message="tns:lerGPSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="serviceSoap" type="tns:serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="lerTicketERP">
+      <soap:operation soapAction="http://localhost/wsumi/lerTicketERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarTicket">
+      <soap:operation soapAction="http://localhost/wsumi/validarTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerUsuario">
+      <soap:operation soapAction="http://localhost/wsumi/lerUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuintesAtualizados">
+      <soap:operation soapAction="http://localhost/wsumi/listarContribuintesAtualizados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinte">
+      <soap:operation soapAction="http://localhost/wsumi/lerContribuinte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJ">
+      <soap:operation soapAction="http://localhost/wsumi/lerContribuinteCNPJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJBase">
+      <soap:operation soapAction="http://localhost/wsumi/lerContribuinteCNPJBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuinteCPFSocio">
+      <soap:operation soapAction="http://localhost/wsumi/listarContribuinteCPFSocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSocios">
+      <soap:operation soapAction="http://localhost/wsumi/listarSocios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarOcorrenciasFiscais">
+      <soap:operation soapAction="http://localhost/wsumi/listarOcorrenciasFiscais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRecolhimento">
+      <soap:operation soapAction="http://localhost/wsumi/listarRecolhimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisSaida">
+      <soap:operation soapAction="http://localhost/wsumi/listarNotasFiscaisSaida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEntrada">
+      <soap:operation soapAction="http://localhost/wsumi/listarNotasFiscaisEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEletronicas">
+      <soap:operation soapAction="http://localhost/wsumi/listarNotasFiscaisEletronicas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalEletronica">
+      <soap:operation soapAction="http://localhost/wsumi/lerNotaFiscalEletronica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalRegistro">
+      <soap:operation soapAction="http://localhost/wsumi/lerNotaFiscalRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerECFLacre">
+      <soap:operation soapAction="http://localhost/wsumi/lerECFLacre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerECFEquipamento">
+      <soap:operation soapAction="http://localhost/wsumi/lerECFEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarECFEquipamento">
+      <soap:operation soapAction="http://localhost/wsumi/listarECFEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPassesAbertos">
+      <soap:operation soapAction="http://localhost/wsumi/listarPassesAbertos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerPasseAberto">
+      <soap:operation soapAction="http://localhost/wsumi/lerPasseAberto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarGPS">
+      <soap:operation soapAction="http://localhost/wsumi/registrarGPS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarGPS">
+      <soap:operation soapAction="http://localhost/wsumi/listarGPS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerGPS">
+      <soap:operation soapAction="http://localhost/wsumi/lerGPS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serviceSoap12" type="tns:serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="lerTicketERP">
+      <soap12:operation soapAction="http://localhost/wsumi/lerTicketERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarTicket">
+      <soap12:operation soapAction="http://localhost/wsumi/validarTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerUsuario">
+      <soap12:operation soapAction="http://localhost/wsumi/lerUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuintesAtualizados">
+      <soap12:operation soapAction="http://localhost/wsumi/listarContribuintesAtualizados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinte">
+      <soap12:operation soapAction="http://localhost/wsumi/lerContribuinte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJ">
+      <soap12:operation soapAction="http://localhost/wsumi/lerContribuinteCNPJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerContribuinteCNPJBase">
+      <soap12:operation soapAction="http://localhost/wsumi/lerContribuinteCNPJBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarContribuinteCPFSocio">
+      <soap12:operation soapAction="http://localhost/wsumi/listarContribuinteCPFSocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSocios">
+      <soap12:operation soapAction="http://localhost/wsumi/listarSocios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarOcorrenciasFiscais">
+      <soap12:operation soapAction="http://localhost/wsumi/listarOcorrenciasFiscais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRecolhimento">
+      <soap12:operation soapAction="http://localhost/wsumi/listarRecolhimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisSaida">
+      <soap12:operation soapAction="http://localhost/wsumi/listarNotasFiscaisSaida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEntrada">
+      <soap12:operation soapAction="http://localhost/wsumi/listarNotasFiscaisEntrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarNotasFiscaisEletronicas">
+      <soap12:operation soapAction="http://localhost/wsumi/listarNotasFiscaisEletronicas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalEletronica">
+      <soap12:operation soapAction="http://localhost/wsumi/lerNotaFiscalEletronica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerNotaFiscalRegistro">
+      <soap12:operation soapAction="http://localhost/wsumi/lerNotaFiscalRegistro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerECFLacre">
+      <soap12:operation soapAction="http://localhost/wsumi/lerECFLacre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerECFEquipamento">
+      <soap12:operation soapAction="http://localhost/wsumi/lerECFEquipamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarECFEquipamento">
+      <soap12:operation soapAction="http://localhost/wsumi/listarECFEquipamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPassesAbertos">
+      <soap12:operation soapAction="http://localhost/wsumi/listarPassesAbertos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerPasseAberto">
+      <soap12:operation soapAction="http://localhost/wsumi/lerPasseAberto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarGPS">
+      <soap12:operation soapAction="http://localhost/wsumi/registrarGPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarGPS">
+      <soap12:operation soapAction="http://localhost/wsumi/listarGPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lerGPS">
+      <soap12:operation soapAction="http://localhost/wsumi/lerGPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Serviços consumidos pela Unidade Móvel Informatizada (UMI_Company).</wsdl:documentation>
+    <wsdl:port name="serviceSoap" binding="tns:serviceSoap">
+      <soap:address location="http://webservice.endpoint/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serviceSoap12" binding="tns:serviceSoap12">
+      <soap12:address location="http://webservice.endpoint/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

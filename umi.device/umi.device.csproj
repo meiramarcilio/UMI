@@ -1,0 +1,360 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72BDB93A-2BC0-484B-8CD8-F1F7386162FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>umi.device</RootNamespace>
+    <AssemblyName>umi.device</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>umi.device</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>icons\ferrari.ico</ApplicationIcon>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Naming#CA1718;-Microsoft.Naming#CA1720;-Microsoft.Naming#CA1700;-Microsoft.Naming#CA1712;-Microsoft.Naming#CA1713;-Microsoft.Naming#CA1709;-Microsoft.Naming#CA1708;-Microsoft.Naming#CA1715;-Microsoft.Naming#CA1710;-Microsoft.Naming#CA1707;-Microsoft.Naming#CA1722;-Microsoft.Naming#CA1711;-Microsoft.Naming#CA1716;-Microsoft.Naming#CA1705;-Microsoft.Naming#CA1725;-Microsoft.Naming#CA1719;-Microsoft.Naming#CA1721;-Microsoft.Naming#CA1706;-Microsoft.Naming#CA1724;-Microsoft.Naming#CA1726</CodeAnalysisRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BackgroundWorker, Version=1.0.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BackgroundWorker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.Status, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.43.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=x86" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="business\conectividade.cs" />
+    <Compile Include="business\deviceid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="business\frmBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="business\GPS\Gps.cs" />
+    <Compile Include="business\GPS\Nmea.cs" />
+    <Compile Include="business\seguranca.cs" />
+    <Compile Include="business\util.cs" />
+    <Compile Include="db\Contribuinte.cs" />
+    <Compile Include="db\SQLiteBlocks.cs" />
+    <Compile Include="db\Usuario.cs" />
+    <Compile Include="frmAjudaSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjudaSobre.Designer.cs">
+      <DependentUpon>frmAjudaSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAtualizarBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAtualizarBase.Designer.cs">
+      <DependentUpon>frmAtualizarBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContribuinteBusca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContribuinteBusca.Designer.cs">
+      <DependentUpon>frmContribuinteBusca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContribuinteDetalhar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContribuinteDetalhar.Designer.cs">
+      <DependentUpon>frmContribuinteDetalhar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalharListViewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalharListViewItem.Designer.cs">
+      <DependentUpon>frmDetalharListViewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmECF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmECF.Designer.cs">
+      <DependentUpon>frmECF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmECFDetalhar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmECFDetalhar.Designer.cs">
+      <DependentUpon>frmECFDetalhar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitor.Designer.cs">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotaFiscalDetalhar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotaFiscalDetalhar.Designer.cs">
+      <DependentUpon>frmNotaFiscalDetalhar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotaFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotaFiscal.Designer.cs">
+      <DependentUpon>frmNotaFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotaFiscalEletronica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotaFiscalEletronica.Designer.cs">
+      <DependentUpon>frmNotaFiscalEletronica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotaFiscalRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotaFiscalRegistro.Designer.cs">
+      <DependentUpon>frmNotaFiscalRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasse.Designer.cs">
+      <DependentUpon>frmPasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAjudaSobre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAjudaSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAtualizarBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAtualizarBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContribuinteBusca.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmContribuinteBusca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContribuinteDetalhar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmContribuinteDetalhar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalharListViewItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDetalharListViewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmECF.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmECF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmECFDetalhar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmECFDetalhar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonitor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotaFiscal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNotaFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotaFiscalDetalhar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNotaFiscalDetalhar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotaFiscalEletronica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNotaFiscalEletronica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotaFiscalRegistro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNotaFiscalRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Web References\wsumi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="db\umidb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db\umidb_passwd.txt" />
+    <Content Include="db\umidb_script.txt" />
+    <Content Include="icons\astra_set.jpg" />
+    <Content Include="icons\caminhao1.jpg" />
+    <Content Include="icons\caminhao2.jpg" />
+    <Content Include="icons\documents.jpg" />
+    <Content Include="icons\ecf2.jpg" />
+    <Content Include="icons\ecf3.gif" />
+    <Content Include="icons\ferrari.ico" />
+    <Content Include="icons\hddrive1.jpg" />
+    <Content Include="icons\lampada.jpg" />
+    <Content Include="icons\mobilephone.jpg" />
+    <Content Include="icons\network.jpg" />
+    <Content Include="icons\networkvista.jpg" />
+    <Content Include="icons\nfe.jpg" />
+    <Content Include="icons\padlockuser2.jpg" />
+    <Content Include="icons\pasta_atualizar.jpg" />
+    <Content Include="icons\pasta_contrib.jpg" />
+    <Content Include="icons\pasta_notas.jpg" />
+    <Content Include="icons\search.jpg" />
+    <Content Include="icons\smartphone.jpg" />
+    <None Include="Web References\wsumi\Contribuinte1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\ECFEquipamento1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\ECFLacre1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\Gps.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\NotaFiscalEletronica1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\NotaFiscalEntrada1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\NotaFiscalRegistro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\NotaFiscalSaida1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\Ocorrencia1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\Passe.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\Recolhimento1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsumi\service.disco" />
+    <None Include="Web References\wsumi\service.wsdl" />
+    <None Include="Web References\wsumi\Socio1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsumi\UsuarioERP1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://webservice.endpoint/service.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\wsumi\</RelPath>
+      <UpdateFromURL>http://webservice.endpoint/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

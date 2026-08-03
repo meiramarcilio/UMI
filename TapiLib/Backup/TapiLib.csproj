@@ -1,0 +1,109 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="87c15e6d-a6fb-4ede-8c85-7de180d85f7a">
+    <Build>
+      <Settings AssemblyName="TapiLib" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\ByteCopy.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\InternalAttribute.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\ArrayAttribute.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CellTSP.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\TapiStruct.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLDEVCONFIG.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLBEARERINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLDATACOMPINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLRADIOLINKINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLGPRSCONNECTIONINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLGPRSQOSSETTINGS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\GPRSPRECEDENCECLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\GPRSDELAYCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\GPRSRELIABILITYCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\PEAKTHRUCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\MEANTHRUCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CELLDEVCONFIG_SPEED.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEBARRMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLWAITING.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECAPSCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEEQUIPSTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEGPRSCLASS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEGPRSCLASSCHANGED.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEHSCSDAIRRATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEHSCSDCODING.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEMUTESTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEOPFORMAT.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEOPSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINERADIOPRESENCE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINERADIOSUPPORT.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEREGMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEREGSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINESENDCALLERID.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINESYSTEMTYPE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEUSSDFLAG.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEOPERATOROPTIONS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVSPECIFIC_CELLTSP.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEOPERATOR.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEOPERATORSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEGENERALINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\Tapi.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\Line.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\Call.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\TapiAsyncResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\MakeCallAsyncResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\NativeTapi.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\TapiException.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEINITIALIZEEXPARAMS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEMESSAGE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLPARAMSDEVSPECIFIC.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEEXTENSIONID.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVCAPS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDIALPARAMS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLPARAMS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLINFO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLLIST.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEADDRESSCAPS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEADDRESSSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLSTATUS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\VARSTRING.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEINITIALIZEEXOPTIONS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEMEDIACONTROL.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEMEDIAMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEERR.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDISCONNECTMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEMESSAGES.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEADDRCAPFLAGS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEBEARERMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLSELECT.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEADDRESSMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLINFOSTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLSTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVSTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVCAPFLAGS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEANSWERMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLPRIVILEGE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDIGITMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\CALLER_ID_OPTIONS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLORIGIN.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLPARAMFLAGS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDIALTONEMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLREASON.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEFEATURE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEROAMMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEDEVSTATUSFLAGS.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEFORWARDMODE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINEADDRESSSTATE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLFEATURE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="OpenNETCF\Tapi\LINECALLFEATURE2.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
